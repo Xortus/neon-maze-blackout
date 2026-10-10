@@ -1,51 +1,61 @@
 # Neon Maze: Blackout
 
-Neonowy labirynt 2D przygotowany w Unity na komputer i Androida.
+Neonowy labirynt 2D w Unity na komputer i Androida, z kampanią oraz współpracą dwóch graczy.
 
-## Pobierz grę i projekt
+## Pobierz wersję v0.2.0
 
-Wydanie **v0.1.0** zawiera:
+- [Gra na Androida — APK](https://github.com/Xortus/neon-maze-blackout/releases/download/v0.2.0/NeonMazeBlackout-Android.apk)
+- [Projekt Unity — ZIP](https://github.com/Xortus/neon-maze-blackout/releases/download/v0.2.0/NeonMazeBlackout-UnityProject.zip)
+- [Opis wydania i wszystkie pliki](https://github.com/Xortus/neon-maze-blackout/releases/tag/v0.2.0)
 
-- [NeonMazeBlackout-Android.apk](https://github.com/Xortus/neon-maze-blackout/releases/download/v0.1.0/NeonMazeBlackout-Android.apk) — instalator gry na Androida.
-- [NeonMazeBlackout-UnityProject.zip](https://github.com/Xortus/neon-maze-blackout/releases/download/v0.1.0/NeonMazeBlackout-UnityProject.zip) — pełny projekt Unity: Assets, Packages, ProjectSettings i pliki .meta.
-- [Strona wydania](https://github.com/Xortus/neon-maze-blackout/releases/tag/v0.1.0) — opis wersji i pliki do pobrania.
-
-Projekt jest udostępniony jako archiwum w wydaniu. Automatyczne archiwa „Source code” GitHuba zawierają pliki tego repozytorium; do otwarcia gry pobierz **NeonMazeBlackout-UnityProject.zip**.
+Do otwarcia projektu pobierz **NeonMazeBlackout-UnityProject.zip** z wydania. Automatyczne archiwa „Source code” GitHuba zawierają pliki repozytorium.
 
 ## Android
 
-1. Pobierz APK na telefon.
-2. Otwórz go i zezwól na instalację z aplikacji, z której otwierasz plik.
-3. Uruchom Neon Maze: Blackout. Gra działa w poziomie; ruch obsługuje joystick, umiejętność — przycisk klasy.
+1. Pobierz APK na telefon i zainstaluj je. Jeśli Android poprosi o zgodę na instalację z aplikacji, w której otwierasz APK, udziel jej dla tej instalacji.
+2. Uruchom grę. Ekran działa poziomo; ruchem steruje joystick, a umiejętnością przycisk klasy.
+3. Aktualizację można zainstalować na wcześniejszej wersji bez odinstalowywania gry.
 
-APK jest wersją prototypową ostatnio przygotowaną i zainstalowaną na telefonie. Nowe zmiany w kodzie wymagają ponownej budowy aplikacji.
+APK zawiera aktualną współpracę. Instalacja i wspólna gra telefon–komputer zostały potwierdzone przez autora na Redmi.
 
-## Projekt Unity
+## Komputer i projekt Unity
 
-1. Pobierz i rozpakuj **NeonMazeBlackout-UnityProject.zip**.
+1. Rozpakuj **NeonMazeBlackout-UnityProject.zip**.
 2. W Unity Hub wybierz **Add → Add project from disk** i folder **NeonMazeBlackout**.
-3. Otwórz projekt w **Unity 6.3 LTS, 6000.3.26f1**.
-4. Poczekaj na pobranie pakietów i import zasobów.
-5. Otwórz scenę **Assets/Scenes/SampleScene.unity** i naciśnij Play.
+3. Otwórz go w **Unity 6.3 LTS — 6000.3.26f1** i poczekaj na import oraz pobranie pakietów.
+4. Otwórz **Assets/Scenes/SampleScene.unity** i naciśnij Play.
 
-Archiwum zawiera kod C#, mapy, grafiki, sceny, zależności i ustawienia. Foldery Library, Temp, Logs oraz UserSettings nie są potrzebne — Unity odtworzy lokalne dane.
+Archiwum zawiera Assets, Packages, ProjectSettings oraz pliki .meta. Dane robocze Unity są odtwarzane po otwarciu. W tym wydaniu komputerową wersję uruchamia się z projektu Unity.
 
-Do budowy Androida potrzebne są moduły Android Build Support, SDK/NDK i OpenJDK dla tej wersji Unity.
+## Współpraca dwóch graczy
 
-## Obecne elementy gry
+1. Na pierwszym urządzeniu wybierz **POKÓJ ONLINE → UTWÓRZ POKÓJ**.
+2. Na drugim wpisz kod pokoju i wybierz **DOŁĄCZ**.
+3. Wybierzcie klasy i potwierdźcie gotowość. Gospodarz rozpoczyna kampanię.
+
+- Wspólne kryształy i wynik na tej samej mapie.
+- 60 sekund na każdą z 18 map, start po załadowaniu mapy u obu graczy.
+- Po zebraniu fali kryształów meta zostaje odblokowana; kryształy pojawiają się ponownie w innych miejscach.
+- Dotknięcie przez drona cofa na start tylko złapanego gracza.
+- Przejście dalej po dotarciu obu graczy do mety; pierwszy gracz czeka bezpiecznie.
+- Osobne klasy i wygląd rdzenia dla każdego gracza.
+- Rozłączenie kończy wspólną próbę; do nowej gry utwórzcie nowy pokój.
+
+Na obu urządzeniach użyj tej samej wersji gry i pozostaw grę na pierwszym planie.
+
+## Pozostałe elementy
 
 - Kampania 18 poziomów w sześciu wymiarach.
-- Kryształy energii, drony, meta i okresowy blackout.
+- Drony, kryształy energii, meta i okresowy blackout.
 - Klasy: Zwiadowca, Inżynier, Łowca i Strażnik.
-- Kreator neonowego rdzenia: kolor, obwódka i ślad.
-- Sterowanie klawiaturą i dotykowe.
-- Rekordy lokalne i integracja rankingu z PlayFab.
-- Tworzenie i dołączanie do prywatnych pokoi przez Unity Relay.
+- Kreator rdzenia: kolor, obwódka i ślad.
+- Sterowanie klawiaturą oraz dotykowe.
+- Rekordy lokalne i integracja z PlayFab; wyniki współpracy pozostają oddzielne od rekordów solo.
 
-**Pełna wspólna rozgrywka dwóch graczy jest na etapie zatwierdzonego projektu i planu.** To wydanie zawiera istniejące połączenie pokoju; synchronizacja mapy, kryształów i wspólnej mety jest kolejnym etapem.
+## Usługi i budowanie
 
-## Usługi online
+Pokoje korzystają z Unity Services, Authentication i Relay. Ranking wymaga konfiguracji PlayFab Title ID. Dla własnej publikacji skonfiguruj własne projekty tych usług.
 
-Pokoje wymagają konfiguracji Unity Services / Authentication / Relay. Ranking wymaga konfiguracji PlayFab Title ID. Dla własnej publikacji skonfiguruj własne projekty tych usług; dane instalacji i nick gracza pozostają lokalne.
+Do budowania Androida potrzebne są moduły Android Build Support, SDK/NDK i OpenJDK dla tej wersji Unity. Udostępnione APK obsługuje ARM64 i Androida od API 25.
 
-Gra oraz archiwum projektu są prototypem. Dołączone biblioteki i zasoby zachowują własne pliki licencji i informacji o autorach.
+To nadal rozwijany prototyp. Biblioteki i zasoby zachowują własne pliki licencji oraz informacji o autorach. Sumy kontrolne paczek są w pliku **SHA256SUMS.txt** dołączonym do wydania.
